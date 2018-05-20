@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { OpportunityComponent } from './components/opportunity/opportunity.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
     {
@@ -13,6 +14,7 @@ const routes: Routes = [
         path: 'opportunities',
         component: OpportunityComponent,
     },
+    { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

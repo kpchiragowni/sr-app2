@@ -3,13 +3,16 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
 
 import { OpportunityService } from './services/opportunity.service';
+import { ParameterService } from './services/parameter.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { OpportunityComponent } from './components/opportunity/opportunity.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -17,15 +20,18 @@ import { OpportunityComponent } from './components/opportunity/opportunity.compo
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    OpportunityComponent
+    OpportunityComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [
-    OpportunityService
+    OpportunityService,
+    ParameterService
   ],
   bootstrap: [AppComponent]
 })

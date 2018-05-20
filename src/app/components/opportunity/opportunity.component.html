@@ -2,8 +2,12 @@
   <h1 class="display-4">Previous Investments</h1>
   <p class="lead">Here you can see the previous investments opportunites.</p>
 </div>
+<div class="criteria">
+  <app-criteria #filterCriteria 
+    (valueChange)='onValueChange($event)'></app-criteria>
+</div>
 <div class="card-deck mb-4 text-center">
-    <div class="card mb-3 box-shadow" *ngFor="let opportunity of opportunities">
+    <div class="card mb-4 box-shadow" *ngFor="let opportunity of filteredOpportunities">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">{{opportunity.company}}</h4>
       </div>
