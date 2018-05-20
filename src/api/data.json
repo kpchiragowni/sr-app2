@@ -1,0 +1,172 @@
+{
+    "opportunities": [
+      {
+        "company": "Company X",
+        "tradingActive": true,
+        "averageInvestment": 9014,
+        "totalRaised": 540493,
+        "eis": true,
+        "seis": false
+      },
+      {
+        "company": "ABC Company",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": true,
+        "seis": true
+      },
+      {
+        "company": "ACME Corp 23",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 35000,
+        "eis": true,
+        "seis": true
+      },
+      {
+        "company": "ACME Corp 33",
+        "tradingActive": true,
+        "averageInvestment": 4029,
+        "totalRaised": 30000,
+        "eis": true,
+        "seis": true
+      },
+      {
+        "company": "ACME Corp ltd",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": true,
+        "seis": true
+      },
+      {
+        "company": "ACMEX Corp",
+        "tradingActive": true,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": true,
+        "seis": true
+      },
+      {
+        "company": "ACME Corporation",
+        "tradingActive": true,
+        "averageInvestment": 4029,
+        "totalRaised": 24441337,
+        "eis": true,
+        "seis": false
+      },
+      {
+        "company": "ACME Corp 10",
+        "tradingActive": true,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": false,
+        "seis": true
+      },
+      {
+        "company": "ACME Corp",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": true,
+        "seis": true
+      },
+      {
+        "company": "ACME Corp",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": true,
+        "seis": false
+      },
+      {
+        "company": "ACME Corp",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": true,
+        "seis": true
+      },
+      {
+        "company": "ACME Corp",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": true,
+        "seis": true
+      },
+      {
+        "company": "ACME Corp",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": false,
+        "seis": true
+      },
+      {
+        "company": "ACME Corp",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": false,
+        "seis": false
+      },
+      {
+        "company": "ACME Corp",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": true,
+        "seis": true
+      },
+      {
+        "company": "ACME Corp",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": true,
+        "seis": false
+      },
+      {
+        "company": "ACME Corp",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": true,
+        "seis": false
+      },
+      {
+        "company": "ACME Corp",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": false,
+        "seis": true
+      },
+      {
+        "company": "ACME Corp",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": true,
+        "seis": false
+      },
+      {
+        "company": "ACME Corp",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": true,
+        "seis": false
+      },
+      {
+        "company": "ACME Corp",
+        "tradingActive": false,
+        "averageInvestment": 4029,
+        "totalRaised": 2441337,
+        "eis": true,
+        "seis": true
+      }
+    ]
+  }

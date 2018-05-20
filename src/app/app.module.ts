@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+
+import { OpportunityService } from './services/opportunity.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -18,9 +21,12 @@ import { OpportunityComponent } from './components/opportunity/opportunity.compo
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    OpportunityService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

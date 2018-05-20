@@ -1,3 +1,23 @@
-<p>
-  opportunity works!
-</p>
+<div class="page-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Previous Investments</h1>
+  <p class="lead">Here you can see the previous investments opportunites.</p>
+</div>
+<div class="card-deck mb-4 text-center">
+    <div class="card mb-3 box-shadow" *ngFor="let opportunity of opportunities">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{opportunity.company}}</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title"><small class="text-muted">Investment</small></h2>
+        <h1 class="card-title">{{opportunity?.averageInvestment | currency: 'GBP'}}</h1>
+        <h2 class="card-title"><small class="text-muted">Total raised</small></h2>
+        <h1 class="card-title">{{opportunity?.totalRaised | currency: 'GBP'}}</h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Status: <b>{{opportunity.tradingActive ? 'Active' : 'Not active'}}</b></li>
+          <li>EIS: <b>{{opportunity.eis ? 'Yes': 'No'}}</b></li>
+          <li>SEIS: <b>{{opportunity.seis? 'Yes': 'No'}}</b></li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Read more</button>
+      </div>
+    </div>
+</div>
