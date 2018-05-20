@@ -16,7 +16,7 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 # install and cache app dependencies
 COPY package.json /usr/src/app/package.json
 RUN npm install
-RUN npm install -g @angular/cli@1.6.5
+RUN npm install -g @angular/cli@1.6.5 --unsafe
 # add app
 COPY . /usr/src/app
 
