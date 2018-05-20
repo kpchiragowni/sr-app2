@@ -2,7 +2,7 @@
 
 This project is based on Angular v5.2.11 and Boostrap 4
 
-![alt text](src/assets/images/Front-end-Challenge- Approach-2.png "App screenshot")
+![alt text](src/assets/images/Front-end-Challenge-Approach-2.png "App screenshot")
 
 ## Docker
 
