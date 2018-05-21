@@ -88,21 +88,29 @@ export class OpportunityComponent implements OnInit {
 
   onToggleFilters(key) {
     if (key === 'tradingActive') {
+      if (!this.tradingActive) {
+        this.filters.tradingActive = [true];
+      } else {
+        this.filters.tradingActive = [];
+      }
       this.tradingActive = !this.tradingActive;
     } else if (key === 'eis') {
+      if (!this.tradingActive) {
+        this.filters.eis = [true];
+      } else {
+        this.filters.eis = [];
+      }
       this.eis = !this.eis;
     } else if (key === 'seis') {
+      if (!this.tradingActive) {
+        this.filters.seis = [true];
+      } else {
+        this.filters.seis = [];
+      }
       this.seis = !this.seis;
     }
-
-    this.filters = {
-      tradingActive: [ this.tradingActive ],
-      eis: [ this.eis ],
-      seis: [ this.seis ]
-    };
-
     console.log(this.filters);
 
-    this.filteredOpportunities = <IOpportunity[]>util.multiFilter(this.opportunities, this.filters);
+    this.filteredOpportunities = <IOpportunity[]>util.multiFilter(this.filteredOpportunities, this.filters);
   }
 }
