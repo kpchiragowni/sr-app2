@@ -30,7 +30,7 @@ export class CriteriaComponent implements OnInit, OnChanges, AfterViewInit {
 
   private _sortBy: string;
   get sortBy(): string {
-    return this._listFilter;
+    return this._sortBy;
   }
   set sortBy(value: string) {
     this._sortBy = value;

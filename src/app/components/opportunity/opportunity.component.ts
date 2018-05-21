@@ -28,6 +28,7 @@ export class OpportunityComponent implements OnInit {
         (opportunities: IOpportunity[]) => {
             this.opportunities = opportunities;
             this.filterComponent.listFilter = this.parameterService.filterBy;
+            this.filterComponent.sortBy = this.parameterService.sortBy;
         },
         (error: any) => this.errorMessage = <any>error
     );
@@ -35,8 +36,10 @@ export class OpportunityComponent implements OnInit {
 
   onValueChange(value: object): void {
       this.parameterService.filterBy = value['listFilter'];
+      this.parameterService.sortBy = value['sortBy'];
       this.performFilter(value['listFilter']);
-      if(value && value['sortBy']){
+      console.log(value);
+      if (value && value['sortBy']) {
         this.performSort(value['sortBy']);
       }
   }
@@ -51,7 +54,15 @@ export class OpportunityComponent implements OnInit {
   }
 
   performSort(value) {
-    this.filteredOpportunities = this.filteredOpportunities.sort(opp => opp.totalRaised);
+    if (this.parameterService.filterBy) {
+      this.filteredOpportunities = this.filteredOpportunities.sort((a, b) => {
+        return a[this.parameterService.sortBy] - b[this.parameterService.sortBy];
+      });
+    } else {
+      this.filteredOpportunities = this.opportunities.sort((a, b) => {
+        return a[this.parameterService.sortBy] - b[this.parameterService.sortBy];
+      });
+    }
   }
-
+  
 }
