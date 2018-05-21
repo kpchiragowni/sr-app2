@@ -15,6 +15,7 @@ export class OpportunityComponent implements OnInit {
 
   public opportunities: IOpportunity[];
   public filteredOpportunities: IOpportunity[];
+  public viewType = 'grid';
 
   public errorMessage: any;
 

@@ -3,10 +3,21 @@
   <p class="lead">Here you can see the previous investments opportunites.</p>
 </div>
 <div class="criteria">
-  <app-criteria #filterCriteria 
-    (valueChange)='onValueChange($event)'></app-criteria>
+    <div class="row">
+        <div class="col-sm-8">
+            <app-criteria #filterCriteria 
+              (valueChange)='onValueChange($event)'></app-criteria>
+        </div>
+        <div class="col-sm-4 text-right" style="font-size:1.5em; color:Tomato">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn" (click)="viewType = 'grid'" title="Gallery view"><i class="fas fa-th"></i></button>
+                <button type="button" class="btn" (click)="viewType = 'list'" title="List view"><i class="fas fa-th-list"></i></button>
+              </div>
+        </div>
+    </div>
 </div>
-<div class="card-deck mb-4 text-center">
+<!-- Grid View -->
+<div class="card-deck mb-4 text-center" *ngIf="viewType == 'grid'">
     <div class="card mb-4 box-shadow" *ngFor="let opportunity of filteredOpportunities">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">{{opportunity.company}}</h4>
@@ -25,3 +36,24 @@
       </div>
     </div>
 </div>
+<!-- List view -->
+<table class="table table-striped" *ngIf="viewType == 'list'">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Company</th>
+        <th scope="col">Status</th>
+        <th scope="col">Average Investment</th>
+        <th scope="col">Total Raised</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let opportunity of filteredOpportunities">
+        <th scope="row">#</th>
+        <td>{{opportunity.company}}</td>
+        <td>{{opportunity.tradingActive ? 'Active' : 'Not active'}}</td>
+        <td>{{opportunity?.averageInvestment | currency: 'GBP'}}</td>
+        <td>{{opportunity?.totalRaised | currency: 'GBP'}}</td>
+      </tr>      
+    </tbody>
+  </table>
