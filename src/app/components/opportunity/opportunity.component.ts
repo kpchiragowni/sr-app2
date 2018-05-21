@@ -63,6 +63,8 @@ export class OpportunityComponent implements OnInit {
       if (value && value['sortBy']) {
         this.performSort(value['sortBy']);
       }
+
+      this.onToggleFilters();
   }
 
   performFilter(filterBy?: string): void {
@@ -86,7 +88,7 @@ export class OpportunityComponent implements OnInit {
     }
   }
 
-  onToggleFilters(key) {
+  onToggleFilters(key?: string) {
     if (key === 'tradingActive') {
       if (!this.tradingActive) {
         this.filters.tradingActive = [true];
@@ -110,7 +112,10 @@ export class OpportunityComponent implements OnInit {
       this.seis = !this.seis;
     }
     console.log(this.filters);
-
+    if (this.parameterService.filterBy) {
     this.filteredOpportunities = <IOpportunity[]>util.multiFilter(this.filteredOpportunities, this.filters);
+    } else {
+      this.filteredOpportunities = <IOpportunity[]>util.multiFilter(this.opportunities, this.filters);
+    }
   }
 }
