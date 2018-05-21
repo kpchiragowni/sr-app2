@@ -10,7 +10,7 @@ Create the Docker image and run it locally
 
     docker build --rm -f Dockerfile -t sr-app2:latest .
 
-    docker run -it -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -p 4200:4200 --rm sr-app1
+    docker run -it -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -p 4200:4200 --rm sr-app2
 
 ## Requirements
 
