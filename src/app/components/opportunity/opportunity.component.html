@@ -4,11 +4,31 @@
 </div>
 <div class="criteria">
     <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-6">
             <app-criteria #filterCriteria 
               (valueChange)='onValueChange($event)'></app-criteria>
         </div>
-        <div class="col-sm-4 text-right" style="font-size:1.5em; color:Tomato">
+        <div class="col-sm-4 form-inline">
+            <div class="form-group form-check">
+                <!-- Trading active -->
+                <input type="checkbox" class="form-check-input" id="tradingActive" 
+                  [checked]="tradingActive" (change)="onToggleFilters('tradingActive')">
+                <label class="form-check-label" for="tradingActive">Active</label>                
+            </div>
+            <div class="form-group form-check">
+                <!-- eis -->
+                <input type="checkbox" class="form-check-input" id="eis" 
+                  [checked]="eis" (change)="onToggleFilters('eis')">
+                <label class="form-check-label" for="eis">EIS</label>
+            </div>
+            <div class="form-group form-check">
+                <!-- seis -->
+                <input type="checkbox" class="form-check-input" id="seis" 
+                  [checked]="seis" (change)="onToggleFilters('seis')">
+                <label class="form-check-label" for="seis">SEIS</label>
+            </div>
+        </div>
+        <div class="col-sm-2 text-right" style="font-size:1.5em; color:Tomato">
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button type="button" class="btn" (click)="viewType = 'grid'" title="Gallery view"><i class="fas fa-th"></i></button>
                 <button type="button" class="btn" (click)="viewType = 'list'" title="List view"><i class="fas fa-th-list"></i></button>
