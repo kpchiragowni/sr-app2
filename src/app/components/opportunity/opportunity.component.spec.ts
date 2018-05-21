@@ -1,6 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+
+import { SharedModule } from '../../shared/shared.module';
 
 import { OpportunityComponent } from './opportunity.component';
+
+import { OpportunityService } from '../../services/opportunity.service';
+import { ParameterService } from '../../services/parameter.service';
 
 describe('OpportunityComponent', () => {
   let component: OpportunityComponent;
@@ -8,7 +14,9 @@ describe('OpportunityComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OpportunityComponent ]
+      declarations: [ OpportunityComponent ],
+      imports: [ SharedModule, HttpClientTestingModule ],
+      providers: [ OpportunityService, ParameterService ]
     })
     .compileComponents();
   }));
